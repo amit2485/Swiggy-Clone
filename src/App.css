@@ -36,3 +36,41 @@
     transform: rotate(360deg);
   }
 }
+
+#header{
+  width:100%;
+  padding:10px 0px;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 4px 4px 8px rgb(5, 5, 5);
+  top:0px;
+  z-index: 1;
+  position: fixed;
+}
+
+#popular_restaurant{
+  padding:20px
+}
+
+.list-li:hover{
+  background-color: #61dafb;
+  cursor: pointer;
+}
+
+.accordion-body {
+  position: relative;
+  z-index: 0;
+}
+
+/* Ensure the headers always stay on top */
+.accordion-header {
+  position: relative;
+  z-index: 0;
+}
+
+/* Optionally, to avoid content going outside */
+.accordion-item {
+  overflow: hidden;
+}
