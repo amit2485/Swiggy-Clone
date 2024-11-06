@@ -18,7 +18,7 @@ function Home(props) {
       </div>
       <div
         className="col-10">
-            <PopularRestaurants location={location}/>
+            <PopularRestaurants location={location} setLocationCoordinates={setLocationCoordinates}/>
       </div>
     </div>
   );

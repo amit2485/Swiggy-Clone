@@ -3,7 +3,7 @@ import "../App.css";
 import axios from "axios";
 import ShimmerEffect from '../ShimmerEffect';
 import { Link } from 'react-router-dom';
-function PopularRestaurants({location}) {
+function PopularRestaurants({location,setLocationCoordinates}) {
     const [restaurants, setRestaurants] = useState([]);
     const [restaurantName,setRestaurantName] = useState("")
     const [filterRestaurants, setFilterRestaurants] = useState([])
@@ -65,7 +65,7 @@ function PopularRestaurants({location}) {
                   </div></Link>)
             }):
             filterRestaurants.map((item,i) => {
-                return (<div class="col">
+                return (<Link to={`/menu/${item?.info?.name}/${item?.info?.id}`}><div class="col">
                     <div class="card h-100">
                       <img style={{height:"200px"}} src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${item?.info?.cloudinaryImageId}`} class="card-img-top" alt="..." />
                       <div class="card-body">
@@ -78,7 +78,7 @@ function PopularRestaurants({location}) {
                         </p>
                       </div>
                     </div>
-                  </div>)
+                  </div></Link>)
             })}
           
          
